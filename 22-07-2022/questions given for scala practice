@@ -1,0 +1,136 @@
+22-7-22
+
+1. Write a Scala program to get the character at the given index within a given String. Also print the length of the string.
+ans:
+
+object Main 
+{
+    def main(args: Array[String]) 
+    {
+       var string1 = "Santhosh"
+       var length1= string1.length();
+        println(string1,length1);
+    }
+}
+
+2. Write a Scala program to check whether the first two characters present at the end of a given string. 
+Example:
+    Input string : educated
+    output:  true
+    Input string : ABCDEFBA
+    output:  false
+	
+	object sumofar
+{ 
+  
+    def main(args:Array[String])
+    {
+      var str1 = "educated"
+      if (str1.substring(0, 2).equals(str1.substring(str1.length - 2,
+      str1.length)))
+        println("true")
+    else 
+       println("false")
+    }
+}		   
+
+3. Write a Scala program to read a string and return the string without the first two characters.
+ Keep the first char if it is 'g' and keep the second char if it is 'h'
+Example:-
+    Input strings is: ghost
+    Output string is: ghost
+    Inputstrings is: photo
+    Output string is: hoto
+    Input strings is: goat
+    Output string is: gat
+	
+	
+	abcdef
+	object stringEnd {
+  
+  def main(args: Array[String]): Unit = {
+val string = scala.io.StdIn.readLine("Enter a string : ")     
+var length = string.length
+    var str = ""
+    for (i <- 0 to length -1 ) {
+      if (i == 0 && string.charAt(i) == 'g')
+        str = str + string.charAt(i)
+      else if (i == 1 && string.charAt(i) == 'h')
+        str = str + string.charAt(i)
+      else if (i > 1)
+        str = str + string.charAt(i);
+    }
+    println(str)
+  }
+}
+
+4.  Write a Scala program to sum values of an given array.
+ans:
+object sumofar
+{ 
+  
+    def main(args:Array[String])
+    {
+        var a = Array(2, 3, 5, 9, 7, 5, 8, 5)
+        var result  = a.sum
+        println(result)
+      
+    }
+}
+5.  Write a Scala program to calculate the average value of an array of element.
+object avg_array {
+   def main(args: Array[String]): Unit = {
+     var arr=Array(1, 2, 3, 4, 5, 6)
+   
+     var total =0.0;      
+      for ( i <- 1 to (arr.length)) {
+         total = total + arr(i);
+      }
+      println(total/arr.length)
+   }
+}
+   
+6.  Write a Scala program to calculate the sum of the last 3 elements of an array of integers. 
+If the array length is less than 3 then return the sum of the array. Return 0 if the array is empty.
+object Arrayintegers {
+     
+   def main(args: Array[String]): Unit = {
+        val nums = Array(1, 2)  
+        if (nums.length==0)
+        println("empty")
+        else if(nums.length<3)
+    println(nums.sum)
+        else if (nums.length>3)
+        println(nums(nums.length-1) + nums(nums.length-2) +nums(nums.length-3))
+        
+      } 
+ }
+7. Write a Scala program to reverse an array of integer values.
+8. Write a Scala program to find the common elements between two arrays of integers.
+9. Write a Scala program to find maximum product of two integers in a given array of integers.
+    Sample Input:
+    nums = { 2, 3, 5, 9, 7, 5, 8, 5 }
+    Sample Output:
+    Pair is (9, 8), Maximum Product: 72
+10. Write a Scala program to check if a given string is palindrome or not.
+example:-
+ Input = '123321'
+ Output = True
+ Input = 'racecars'
+ Output = False
+ans:
+object stringEnd {
+  
+  def main(args: Array[String]): Unit = {
+var string = scala.io.StdIn.readLine("Enter a value : ")     
+var length = string.length
+    var rev_str = ""
+    for (i <- 1 to length ) {
+      rev_str= rev_str + string.charAt(length-i)
+    }
+    if(rev_str.equals(string)) 
+      println("true")
+     else 
+    println("false")
+  }
+}
